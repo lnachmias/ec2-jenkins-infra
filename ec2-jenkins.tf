@@ -55,7 +55,7 @@ resource "aws_instance" "jenkins" {
   instance_type   = "t2.medium"
   subnet_id = aws_subnet.public-subnet-1.id
   vpc_security_group_ids = [aws_security_group.terraform_SG.id]
-  key_name        = "mobileye"
+  key_name        = "mobileye-eu-west2"
   associate_public_ip_address = true
   source_dest_check = false
   user_data = "${file("install-script.sh")}"
